@@ -11,7 +11,7 @@ import "swiper/css/effect-fade";
 
 const slides = [
   {
-    image: "/hero-maputo.jpeg",
+    image: "/eurocam_hero.jpg",
     tag: "Associação dos Empresários Europeus em Moçambique",
     title: "A voz do investidor europeu em Moçambique",
     text: "Fortalecemos as relações entre o empresário europeu e Moçambique, facilitando investimento, comércio e diálogo entre o setor público e privado.",
@@ -19,7 +19,7 @@ const slides = [
     secondaryCta: { label: "Saiba Mais", to: "/sobre-nos" },
   },
   {
-    image: "/hero-comercio.jpeg",
+    image: "/eurocam_hero.jpg",
     tag: "Comércio & Exportação",
     title: "Mais oportunidades de comércio e exportação",
     text: "Ampliamos o acesso a mercados europeus e apoiamos empresas locais e internacionais a crescerem em conjunto.",
@@ -27,7 +27,7 @@ const slides = [
     secondaryCta: { label: "Ver Eventos", to: "/eventos" },
   },
   {
-    image: "/hero-parceria.jpeg",
+    image: "/eurocam_hero.jpg",
     tag: "Diálogo Público-Privado",
     title: "Uma ponte entre governo e setor privado",
     text: "Facilitamos advocacia e diálogo institucional, garantindo apoio e segurança nas operações dos investidores europeus.",
