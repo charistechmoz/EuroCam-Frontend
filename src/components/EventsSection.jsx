@@ -110,15 +110,15 @@ const EventsSection = () => {
             {/* Widget: Torne-se Membro */}
             <div className="bg-primary rounded-lg p-6 flex flex-col gap-3">
               <h3 className="font-ubuntu font-bold text-fourth text-lg leading-snug">
-                Torne-se Membro
+                Como tornar-se Membro?
               </h3>
               <p className="font-open-sans text-white/75 text-sm leading-relaxed">
-                Junte-se à rede da EuroCam e tenha acesso a eventos exclusivos,
+                Saiba como tornar-se um membro da EuroCam e tenha acesso a eventos exclusivos,
                 advocacia e oportunidades de negócio.
               </p>
               <Link to="/associados">
                 <Button variant="secondary" size="default" className="w-full mt-1">
-                  Associar-me
+                  Saber Mais
                 </Button>
               </Link>
             </div>
