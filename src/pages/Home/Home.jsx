@@ -1,5 +1,8 @@
 import React from 'react'
 import Hero from '../../components/HeroSection'; 
+import NaNewsletter from '../../components/Newsletter';
+import News from '../../components/News';
+import EventsSection from '../../components/EventsSection';
 
 
 const focusPoints = [
@@ -76,6 +79,10 @@ const Home = () => {
         </div>
       </div>
     </section>
+    <News />
+    <EventsSection />
+
+    <NaNewsletter />
     </>
   )
 }
