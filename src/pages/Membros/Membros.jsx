@@ -8,6 +8,7 @@ import {
 } from "react-icons/fi";
 import { Button } from "../../components/ui/button";
 import PageHeader from "../../components/PageHeader";
+import Camaras from "../../components/Camaras";
 
 const benefits = [
   {
@@ -99,6 +100,8 @@ const Membros = () => {
           </div>
         </div>
       </section>
+      {/* Camaras logo section */}
+      <Camaras />
 
       {/* CTA final */}
       <section className="w-full bg-gray-100 py-16">
