@@ -9,6 +9,7 @@ import {
 import { Button } from "../../components/ui/button";
 import PageHeader from "../../components/PageHeader";
 import Camaras from "../../components/Camaras";
+import MembrosImage from "../../assets/images/membros.jpg"
 
 const benefits = [
   {
@@ -37,7 +38,7 @@ const Membros = () => {
   return (
     <>
       <PageHeader
-        image="/src/assets/images/membros.jpg"
+        image={MembrosImage}
         title="Membros"
         subtitle="Junte-se a Nós"
       />
