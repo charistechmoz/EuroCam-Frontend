@@ -7,6 +7,7 @@ import {
   FiBarChart2,
 } from "react-icons/fi";
 import { Button } from "../../components/ui/button";
+import PageHeader from "../../components/PageHeader";
 
 const benefits = [
   {
@@ -34,16 +35,21 @@ const benefits = [
 const Membros = () => {
   return (
     <>
+      <PageHeader
+        image="/src/assets/images/membros.jpg"
+        title="Membros"
+        subtitle="Junte-se a Nós"
+      />
       {/* Intro */}
-      <section className="w-full bg-tertiary py-20 md:py-28">
+      <section className="w-full bg-gray-100 py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <span className="inline-block text-secondary font-ubuntu font-semibold text-sm tracking-wide uppercase mb-4">
             Junte-se a Nós
           </span>
-          <h1 className="font-ubuntu font-bold text-fourth text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
+          <h1 className="font-ubuntu font-bold text-gray-500 text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
             Associados da EuroCam
           </h1>
-          <p className="font-open-sans text-white/80 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="font-open-sans text-gray-500 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
             A EuroCam reúne empresas e organizações que compartilham o
             compromisso de fomentar o desenvolvimento sustentável e a
             inovação em Moçambique. Os nossos associados representam uma

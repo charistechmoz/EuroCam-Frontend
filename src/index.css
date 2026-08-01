@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Send+Flowers&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @import "tailwindcss";
 
@@ -7,22 +7,10 @@
   --color-secondary: #e8cc2d;  /* dourado das estrelas */
   --color-tertiary: #003d87;   /* azul mais escuro, para contraste/hover */
   --color-fourth: #ffffff;
-  --font-montserrat: 'Montserrat', sans-serif;
-  --font-open-sans: 'Open Sans', sans-serif;
-  --font-pt-serif: 'PT Serif', serif;
-  --font-roboto: 'Roboto', sans-serif;
-  --font-send-flowers: 'Send Flowers', sans-serif;
-  --font-ubuntu: 'Ubuntu', sans-serif;
-  --font-quincy: 'Quincy', sans-serif;
-  --font-quincy-bold: 'Quincy Bold', sans-serif;
-  --font-quincy-italic: 'Quincy Italic', sans-serif;
-  --font-lora: 'Lora', serif;
+  --font-family: "Inter", sans-serif;
 }
 
+* {
 
-@font-face {
-  font-family: 'Quincy';
-  src: url("./assets/fonts/Fontspring-DEMO-quincycf-regular.otf");
-  font-weight: normal;
-  font-style: normal;
+  font-family: var(--font-family);
 }
