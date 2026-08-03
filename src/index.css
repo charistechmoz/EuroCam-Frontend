@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0051b5;    /* azul institucional (logo EuroCam) */
-  --color-secondary: #e8cc2d;  /* dourado das estrelas */
-  --color-tertiary: #003d87;   /* azul mais escuro, para contraste/hover */
+  --color-primary: #0051b5;
+  --color-secondary: #e8cc2d;
+  --color-tertiary: #003d87;
   --color-fourth: #ffffff;
-  --font-family: "Inter", sans-serif;
+
+  /* Todos os tokens de fonte apontam para Arial,
+     assim qualquer font-ubuntu / font-open-sans / font-pt-serif
+     que já uses nos componentes passa a renderizar a mesma fonte */
+  --font-pt-serif: Arial, sans-serif;
+  --font-ubuntu: Arial, sans-serif;
+  --font-open-sans: Arial, sans-serif;
 }
 
 * {
-
-  font-family: var(--font-family);
+  font-family: var(--font-pt-serif);
 }
