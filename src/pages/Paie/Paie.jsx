@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MdPhone, MdEmail } from "react-icons/md";
 import { Button } from "../../components/ui/button";
+import PageHeader from "../../components/PageHeader";
+import PAIEImage from "../../assets/images/paie.jpg";
 
 const functions = [
   "Manter uma base de dados actualizada de todos os investidores privados europeus em Moçambique.",
@@ -17,18 +19,22 @@ const PAIE = () => {
   return (
     <>
       {/* Cabeçalho da página */}
-      <section className="w-full bg-tertiary py-20 md:py-28">
+      <PageHeader
+        image={PAIEImage}
+        title="Plataforma de Apoio ao Investidor"
+        
+      />
+      <section className="w-full py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-block text-secondary font-ubuntu font-semibold text-sm tracking-wide uppercase mb-4">
             Iniciativa EuroCam
           </span>
-          <h1 className="font-ubuntu font-bold text-fourth text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
+          <h1 className="font-ubuntu font-bold text-tertiary text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
             Plataforma de Apoio ao Investidor
           </h1>
-          <p className="font-open-sans text-white/80 text-base md:text-lg leading-relaxed">
-            Como iniciativa da EuroCam, o PAIE servirá como ombudsman e
-            advogado em nome da EuroCam junto de investidores europeus em
-            Moçambique.
+          <p className="font-open-sans text-gray-600 text-base md:text-lg leading-relaxed">
+            Como iniciativa da EuroCam, o PAIE servirá como ombudsman e advogado
+            em nome da EuroCam junto de investidores europeus em Moçambique.
           </p>
         </div>
       </section>
@@ -39,31 +45,30 @@ const PAIE = () => {
           {/* Coluna de texto */}
           <div className="lg:col-span-8">
             <p className="font-open-sans text-gray-600 text-base md:text-lg leading-relaxed mb-6">
-              Ao trabalhar em estreita colaboração com os investidores
-              europeus, o PAIE identifica as áreas de interesse e os
-              constrangimentos enfrentados pelos investidores em diferentes
-              fases dos seus ciclos de negócio, contribuindo para um diálogo
-              frutífero — tanto privado-privado como público-privado —
-              através da sua participação no mecanismo de apoio
-              pós-estabelecimento do governo.
+              Ao trabalhar em estreita colaboração com os investidores europeus,
+              o PAIE identifica as áreas de interesse e os constrangimentos
+              enfrentados pelos investidores em diferentes fases dos seus ciclos
+              de negócio, contribuindo para um diálogo frutífero — tanto
+              privado-privado como público-privado — através da sua participação
+              no mecanismo de apoio pós-estabelecimento do governo.
             </p>
 
             {/* Nota de destaque — serviço gratuito */}
             <div className="border-l-4 border-secondary pl-6 py-1 my-10">
               <p className="font-pt-serif italic text-tertiary text-lg md:text-xl leading-relaxed">
-                Os serviços do PAIE são fornecidos gratuitamente a
-                investidores privados. No entanto, se forem necessários
-                serviços especializados, o custo da contratação desses
-                serviços será suportado pelo investidor privado.
+                Os serviços do PAIE são fornecidos gratuitamente a investidores
+                privados. No entanto, se forem necessários serviços
+                especializados, o custo da contratação desses serviços será
+                suportado pelo investidor privado.
               </p>
             </div>
 
             <p className="font-open-sans text-gray-600 text-base md:text-lg leading-relaxed mb-16">
               A EuroCam compromete-se a prestar assistência aos investidores
-              privados europeus e a acompanhar a implementação dos
-              regulamentos na prática. Isto materializa-se através do
-              trabalho do PAIE como ferramenta executiva técnica, e através
-              do trabalho de advocacia da liderança da EuroCam.
+              privados europeus e a acompanhar a implementação dos regulamentos
+              na prática. Isto materializa-se através do trabalho do PAIE como
+              ferramenta executiva técnica, e através do trabalho de advocacia
+              da liderança da EuroCam.
             </p>
 
             {/* Funções do PAIE */}
@@ -101,11 +106,15 @@ const PAIE = () => {
                   Precisa de Apoio como Investidor?
                 </h3>
                 <p className="font-open-sans text-white/75 text-sm leading-relaxed">
-                  Contacte o PAIE e submeta a sua questão ou reclamação junto
-                  da nossa equipa técnica.
+                  Contacte o PAIE e submeta a sua questão ou reclamação junto da
+                  nossa equipa técnica.
                 </p>
                 <Link to="/contactos">
-                  <Button variant="secondary" size="default" className="w-full mt-1">
+                  <Button
+                    variant="secondary"
+                    size="default"
+                    className="w-full mt-1"
+                  >
                     Contactar o PAIE
                   </Button>
                 </Link>
@@ -136,8 +145,8 @@ const PAIE = () => {
               <div className="bg-gray-100 rounded-lg p-6">
                 <p className="font-open-sans text-gray-500 text-xs leading-relaxed">
                   O serviço do PAIE é gratuito para investidores privados
-                  europeus. Serviços especializados adicionais são
-                  suportados pelo investidor.
+                  europeus. Serviços especializados adicionais são suportados
+                  pelo investidor.
                 </p>
               </div>
             </div>

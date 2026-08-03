@@ -4,6 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
+import EUStars from "./Eustars";
 
 const usefulLinks = [
   { name: "Delegação da UE em Moçambique", href: "https://www.eeas.europa.eu/mozambique/uniao-europeia-e-mocambique_pti?s=111" },
@@ -171,9 +172,12 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="w-full bg-primary">
         <div className="max-w-7xl mx-auto px-6 py-4">
-          <p className="text-white/80 font-open-sans text-xs text-center">
-            © {new Date().getFullYear()} EuroCam. Todos os direitos reservados. Financiado pela União Europeia.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+            <EUStars size={18} opacity={0.9} />
+            <p className="text-white/80 font-open-sans text-xs text-center">
+              © {new Date().getFullYear()} EuroCam. Todos os direitos reservados. Financiado pela União Europeia.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

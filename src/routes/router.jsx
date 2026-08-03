@@ -6,6 +6,7 @@ import OrgaosSociais from "../pages/About/OrgaosSociais";
 import Membros from "../pages/Membros/Membros"
 import PAIE from "../pages/Paie/Paie";
 import Galeria from "../pages/Galeria/Galeria";
+import Noticias from "../pages/Noticias/Noticias";
 import Eventos from "../pages/Eventos/Eventos";
 import Contacto from "../pages/Contacto/Contacto"
 
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         {
           path: "/eventos",
           element: <Eventos />
+        },
+        {
+          path:"/noticias",
+          element: <Noticias />
         },
         {
           path: "/galeria",
