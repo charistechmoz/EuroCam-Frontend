@@ -11,6 +11,7 @@ import MarkatoImage from "../../assets/images/markato.jpg"
 import GarethCliftonImage from "../../assets/images/Gareth-Clifton-1.jpg"
 import AntoninoMaggioreImage from "../../assets/images/Antonio Maggiore.jpeg"
 import TatianaMataImage from "../../assets/images/Tatiana.png"
+import AboutPageImage from "../../assets/images/About.PNG"
 
 
 
@@ -148,7 +149,7 @@ const OrgaosSociais = () => {
   return (
     <>
       <PageHeader
-        image="/logo-eurocam.jpg"
+        image={AboutPageImage}
         title="Órgãos Sociais"
         subtitle="Conheça os membros que compõem os órgãos sociais da EuroCam, responsáveis por liderar e orientar as atividades da associação em Moçambique."
       />

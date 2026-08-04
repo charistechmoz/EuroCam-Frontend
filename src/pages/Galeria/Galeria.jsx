@@ -3,6 +3,7 @@ import { FiX, FiChevronLeft, FiChevronRight, FiPlay } from "react-icons/fi";
 import PageHeader from "../../components/PageHeader";
 import EUStars from "../../components/Eustars";
 import { galeriaItems } from "../../assets/data/data";
+import AboutPageImage from "../../assets/images/About.PNG"
 
 const categories = ["Todas", "Eventos", "Missões", "Feiras", "Vídeos"];
 
@@ -49,7 +50,7 @@ const Galeria = () => {
   return (
     <>
       <PageHeader
-        image="/logo-eurocam.jpg"
+        image={AboutPageImage}
         title="Galeria"
         subtitle="Explore a nossa galeria de imagens e vídeos, capturando momentos marcantes de eventos, iniciativas e atividades da EuroCam em Moçambique."
       />

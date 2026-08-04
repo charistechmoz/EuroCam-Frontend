@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import PageHeader from "../../components/PageHeader";
 import EUStars from "../../components/Eustars";
+import AboutPageImage from "../../assets/images/About.PNG"
 
 
 const objetivos = [
@@ -45,7 +46,7 @@ const SobreNos = () => {
   return (
     <>
       <PageHeader
-        image="/logo-eurocam.jpg"
+        image={AboutPageImage}
         title="Sobre Nós"
         subtitle="Conheça a missão, visão e objetivos que orientam o trabalho da EuroCam em Moçambique."
       />
