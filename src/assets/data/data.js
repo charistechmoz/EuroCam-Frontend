@@ -47,17 +47,17 @@ export const fotosGaleria = [
 ]
 
 export const galeriaItems = [
-  { id: 1, type: "image", src: galeria1, category: "Eventos", title: "Troca de Impressões no Mozambique-EU Business Forum 2026", span: "row-span-2" },
-  { id: 2, type: "image", src: galeria2, category: "Missões", title: "Delegação Reunida na Sessão Global Gateway", span: "" },
-  { id: 3, type: "image", src: galeria3, category: "Feiras", title: "Sessão Fotográfica com a Delegação EuroCam", span: "" },
-  { id: 4, type: "image", src: galeria4, category: "Eventos", title: "Momento de Networking entre Empresários Europeus", span: "" },
-  { id: 5, type: "image", src: galeria5, category: "Missões", title: "Retrato de Associado no Business Forum 2026", span: "row-span-2" },
-  { id: 6, type: "image", src: galeria6, category: "Feiras", title: "Fotografia Oficial da Delegação Global Gateway", span: "" },
-  { id: 7, type: "image", src: galeria7, category: "Eventos", title: "Diálogo Informal à Margem do Fórum", span: "" },
-  { id: 8, type: "image", src: galeria8, category: "Missões", title: "Cumprimento entre Delegados na Plenária do Fórum", span: "row-span-2" },
-  { id: 9, type: "image", src: galeria9, category: "Feiras", title: "Ambiente na Plenária do Mozambique-EU Business Forum", span: "" },
-  { id: 10, type: "video", src: video1, category: "Vídeos", title: "Sessão de Trabalho em Sala de Reuniões Institucional Europeia", span: "", poster: galeria4 },
-  { id: 11, type: "video", src: video2, category: "Vídeos", title: "Painel de Discussão Acompanhado em Sessão de Trabalho", span: "", poster: galeria9 },
+  { id: 1, type: "image", src: galeria1, category: "Eventos", title: "", span: "row-span-2" },
+  { id: 2, type: "image", src: galeria2, category: "Missões", title: "", span: "" },
+  { id: 3, type: "image", src: galeria3, category: "Feiras", title: "", span: "" },
+  { id: 4, type: "image", src: galeria4, category: "Eventos", title: "", span: "" },
+  { id: 5, type: "image", src: galeria5, category: "Missões", title: "", span: "row-span-2" },
+  { id: 6, type: "image", src: galeria6, category: "Feiras", title: "", span: "" },
+  { id: 7, type: "image", src: galeria7, category: "Eventos", title: "", span: "" },
+  { id: 8, type: "image", src: galeria8, category: "Missões", title: "", span: "row-span-2" },
+  { id: 9, type: "image", src: galeria9, category: "Feiras", title: "", span: "" },
+  { id: 10, type: "video", src: video1, category: "Vídeos", title: "", span: "", poster: galeria4 },
+  { id: 11, type: "video", src: video2, category: "Vídeos", title: "", span: "", poster: galeria9 },
 ];
 
 export { MembrosPicture };
