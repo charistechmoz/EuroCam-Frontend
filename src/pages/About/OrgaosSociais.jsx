@@ -10,6 +10,8 @@ import HolgerHeyImage from "../../assets/images/Holger Hey.jpeg"
 import MarkatoImage from "../../assets/images/markato.jpg"
 import GarethCliftonImage from "../../assets/images/Gareth-Clifton-1.jpg"
 import AntoninoMaggioreImage from "../../assets/images/Antonio Maggiore.jpeg"
+import TatianaMataImage from "../../assets/images/Tatiana.png"
+
 
 
 // NOTA: estes dados virão futuramente do painel admin (CMS).
@@ -34,7 +36,7 @@ const direcao = [
   },
   {
     nome: "Remy Bayiha Kodock",
-    cargo: "Remy Bayiha Kodock",
+    cargo: "Vice-Presidente",
     pais: "França",
     foto: RahiImage,
   },
@@ -44,6 +46,12 @@ const direcao = [
     pais: "Espanha",
     foto: JoseMariaImage,
   },
+  {
+    nome: "Tatiana Mata",
+    cargo: "Vogal",
+    pais: "Países Baixos",
+    foto: TatianaMataImage,
+  }
 ];
 
 const conselhoFiscal = [
@@ -128,7 +136,7 @@ const OrgaoSection = ({ title, subtitle, members }) => (
       )}
     </div>
 
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
       {members.map((member, index) => (
         <MemberCard key={index} {...member} />
       ))}

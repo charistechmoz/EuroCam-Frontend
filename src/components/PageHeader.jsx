@@ -3,7 +3,7 @@ export default function PageHeader({
   image,
   title,
   subtitle,
-  height = "h-[280px] md:h-[480px]", // altura reduzida, ajustável por página
+  height = "h-[210px] md:h-[480px]", // altura reduzida, ajustável por página
 }) {
   return (
     <header className={`relative w-full ${height} overflow-hidden`}>
