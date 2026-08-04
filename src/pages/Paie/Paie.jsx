@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MdPhone, MdEmail } from "react-icons/md";
 import { Button } from "../../components/ui/button";
 import PageHeader from "../../components/PageHeader";
-import PAIEImage from "../../assets/images/paie.jpg";
+import PAIEImage from "../../assets/images/PAIE.PNG";
 
 const functions = [
   "Manter uma base de dados actualizada de todos os investidores privados europeus em Moçambique.",

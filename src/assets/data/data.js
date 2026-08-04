@@ -8,6 +8,7 @@ import chipre from "../images/chipre.jpg";
 import ireland from "../images/ireland.jpg";
 import suecia from "../images/suecia.jpg";
 import finland from "../images/finland.jpg"
+import PaiseBaixos from "../images/paise_baixos.PNG"
 
 import galeria1 from "../images/galeria-1.jpeg";
 import galeria2 from "../images/galeria-2.jpeg";
@@ -32,6 +33,7 @@ export const camarasLogos = [
   { src: ireland, alt: "Câmara de Comércio Irlanda-Moçambique" },
   { src: suecia, alt: "Câmara de Comércio Suécia-Moçambique" },
   { src: finland, alt: "Câmara de Comércio Finlândia-Moçambique" },
+  { src: PaiseBaixos, alt: "Câmara de Comércio Países Baixos-Moçambique" },
 ];
 
 
