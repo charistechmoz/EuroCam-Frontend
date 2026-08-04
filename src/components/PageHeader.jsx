@@ -1,4 +1,6 @@
 // components/PageHeader.jsx
+import { motion } from "framer-motion";
+
 export default function PageHeader({
   image,
   title,
@@ -24,13 +26,23 @@ export default function PageHeader({
       <div className="relative z-10 h-full flex items-end md:items-center">
         <div className="px-6 md:px-16 pb-8 md:pb-0 max-w-3xl">
           {subtitle && (
-            <p className="text-[#c9a227] text-sm md:text-base font-semibold tracking-wide uppercase mb-2">
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="text-[#c9a227] text-sm md:text-base font-semibold tracking-wide uppercase mb-2"
+            >
               {subtitle}
-            </p>
+            </motion.p>
           )}
-          <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+            className="text-white text-3xl md:text-5xl font-bold leading-tight"
+          >
             {title}
-          </h1>
+          </motion.h1>
         </div>
       </div>
     </header>
