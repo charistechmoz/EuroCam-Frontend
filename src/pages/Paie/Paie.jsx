@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { MdPhone, MdEmail } from "react-icons/md";
 import { FiArrowRight, FiChevronRight } from "react-icons/fi";
 import { Button } from "../../components/ui/button";
@@ -20,6 +20,11 @@ const functions = [
 ];
 
 const PAIE = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location]);
+
   return (
     <>
       {/* Cabeçalho da página */}

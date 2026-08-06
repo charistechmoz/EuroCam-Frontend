@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   FiArrowRight,
   FiBookOpen,
@@ -11,7 +12,7 @@ import {
 } from "react-icons/fi";
 import PageHeader from "../../components/PageHeader";
 import PAIESubNav from "../../components/PAIESubNav";
-import PAIEImage from "../../assets/images/paie.jpg";
+import PAIEImage from "../../assets/images/PAIE.PNG";
 
 // Cada acção liga-se a um formulário/fluxo próprio quando o backend estiver pronto.
 // Por agora, "to" aponta para uma rota futura — troca por um <a href="#form"> ou
@@ -62,6 +63,11 @@ const acoes = [
 ];
 
 const CentroDeRecursos = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location]);
+
   return (
     <>
       <PageHeader image={PAIEImage} title="Centro de Recursos" subtitle="PAIE" />
