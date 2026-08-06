@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
+import { useLocation } from "react-router-dom";
 import { FiCalendar, FiArrowRight } from "react-icons/fi";
 import PageHeader from "../../components/PageHeader";
 import NoticiasImage from "../../assets/images/noticias.PNG";
@@ -86,6 +87,11 @@ const Noticias = () => {
     setActiveCategory(cat);
     setVisibleCount(6);
   };
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <>

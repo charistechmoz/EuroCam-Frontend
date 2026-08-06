@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect} from "react";
+import { useLocation } from "react-router-dom";
 import { FiCalendar, FiMapPin, FiArrowRight } from "react-icons/fi";
 import PageHeader from "../../components/PageHeader";
 import EUStars from "../../components/Eustars";
@@ -72,6 +73,11 @@ const categoryColor = {
 };
 
 const Eventos = () => {
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <PageHeader

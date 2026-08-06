@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import PageHeader from "../../components/PageHeader";
 import ContactoImage from "../../assets/images/contactos.PNG";
 
@@ -73,7 +74,13 @@ const Contacto = () => {
     setEnviado(true);
   };
 
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
+
     <>
       <PageHeader
         image={ContactoImage}

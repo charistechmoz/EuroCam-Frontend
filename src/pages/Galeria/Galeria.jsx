@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 import { FiX, FiChevronLeft, FiChevronRight, FiPlay } from "react-icons/fi";
 import PageHeader from "../../components/PageHeader";
 import EUStars from "../../components/Eustars";
@@ -46,6 +47,11 @@ const Galeria = () => {
   }, [lightboxIndex, filtered.length, closeLightbox]);
 
   const activeItem = lightboxIndex !== null ? filtered[lightboxIndex] : null;
+
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <>

@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useEffect} from "react";
+import { useLocation } from "react-router-dom";
 import { FiLinkedin } from "react-icons/fi";
 import PageHeader from "../../components/PageHeader";
 import EUStars from "../../components/Eustars";
-import SimoniSantiImage from "../../assets/images/Simoni Santi.png"
-import PauloOliveiraImage from "../../assets/images/Paulo Viera.jpeg"
-import RahiImage from "../../assets/images/Remy Bayiha.jpg"
-import JoseMariaImage from "../../assets/images/jose-lodares.png"
-import HolgerHeyImage from "../../assets/images/Holger Hey.jpeg"
-import MarkatoImage from "../../assets/images/markato.jpg"
-import GarethCliftonImage from "../../assets/images/Gareth-Clifton-1.jpg"
-import AntoninoMaggioreImage from "../../assets/images/Antonio Maggiore.jpeg"
-import TatianaMataImage from "../../assets/images/Tatiana.png"
-import AboutPageImage from "../../assets/images/About.PNG"
-
-
+import SimoniSantiImage from "../../assets/images/Simoni Santi.png";
+import PauloOliveiraImage from "../../assets/images/Paulo Viera.jpeg";
+import RahiImage from "../../assets/images/Remy Bayiha.jpg";
+import JoseMariaImage from "../../assets/images/jose-lodares.png";
+import HolgerHeyImage from "../../assets/images/Holger Hey.jpeg";
+import MarkatoImage from "../../assets/images/markato.jpg";
+import AntoninoMaggioreImage from "../../assets/images/Antonio Maggiore.jpeg";
+import TatianaMataImage from "../../assets/images/Tatiana.png";
+import AboutPageImage from "../../assets/images/About.PNG";
 
 // NOTA: estes dados virão futuramente do painel admin (CMS).
 // Basta substituir os arrays por um fetch à API/CMS quando estiver pronto.
@@ -52,7 +50,7 @@ const direcao = [
     cargo: "Vogal",
     pais: "Países Baixos",
     foto: TatianaMataImage,
-  }
+  },
 ];
 
 const conselhoFiscal = [
@@ -71,28 +69,23 @@ const assembleiaGeral = [
     pais: "Grécia",
     foto: MarkatoImage,
   },
-  {
-    nome: "Gareth Clifton",
-    cargo: "Vice-Presidente",
-    pais: "Irlanda",
-    foto: GarethCliftonImage,
-  },
+
   {
     nome: "Antonino Maggiore",
     cargo: "Presidente Honorário",
     pais: "Embaixador da Delegação da União Europeia para Moçambique",
     foto: AntoninoMaggioreImage,
-  }
+  },
 ];
 
 const MemberCard = ({ nome, cargo, pais, foto, linkedin }) => (
   <div className="group flex flex-col bg-white rounded-lg border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all duration-300 overflow-hidden">
     <div className="relative w-full aspect-square bg-gray-200 overflow-hidden">
       <img
-  src={foto}
-  alt={nome}
-  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-/>
+        src={foto}
+        alt={nome}
+        className="w-full  object-cover transition-transform duration-500 group-hover:scale-105"
+      />
       <div className="absolute inset-0 bg-tertiary/0 group-hover:bg-tertiary/10 transition-colors duration-300" />
     </div>
 
@@ -146,6 +139,10 @@ const OrgaoSection = ({ title, subtitle, members }) => (
 );
 
 const OrgaosSociais = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <PageHeader
