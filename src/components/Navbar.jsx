@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -13,6 +13,17 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const handleClick = () => setIsVisible(!isVisible);
+
+
+  useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth >= 1024 && isVisible) {
+      setIsVisible(false);
+    }
+  };
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, [isVisible]);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -154,7 +165,7 @@ const Navbar = () => {
                 >
                   <div className="flex items-center justify-between w-full mb-4">
                     <img
-                      src="/logo-eurocam.png"
+                      src="/logo-eurocam.jpg"
                       alt="EuroCam"
                       className="h-10 w-auto object-contain"
                     />
