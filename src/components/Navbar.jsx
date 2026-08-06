@@ -7,6 +7,7 @@ import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 import { RiArrowDropRightLine, RiArrowDropDownLine } from "react-icons/ri";
 import { motion, AnimatePresence } from "framer-motion";
+import { paieMenu } from "../assets/data/paieMenu";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,16 +15,18 @@ const Navbar = () => {
 
   const handleClick = () => setIsVisible(!isVisible);
 
-
+  // Fecha o menu mobile automaticamente se a janela crescer
+  // para o breakpoint desktop (lg = 1024px), evitando que fique
+  // "preso" aberto ao redimensionar do mobile para o desktop.
   useEffect(() => {
-  const handleResize = () => {
-    if (window.innerWidth >= 1024 && isVisible) {
-      setIsVisible(false);
-    }
-  };
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, [isVisible]);
+    const handleResize = () => {
+      if (window.innerWidth >= 1024 && isVisible) {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isVisible]);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -35,7 +38,16 @@ const Navbar = () => {
       ],
     },
     { name: "Membros", path: "/associados" },
-    { name: "PAIE", path: "/paie" },
+    {
+      name: "PAIE",
+      dropdown: [
+        { name: "Visão Geral do PAIE", path: "/paie" },
+        ...paieMenu.map((item) => ({
+          name: item.title,
+          path: `/paie/${item.slug}`,
+        })),
+      ],
+    },
     { name: "Eventos", path: "/eventos" },
     { name: "Notícias", path: "/noticias" },
     { name: "Galeria", path: "/galeria" },
@@ -115,7 +127,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -8 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 bg-primary shadow-lg rounded-md py-2 w-56 z-50 origin-top"
+                        className="absolute top-full left-0 bg-primary shadow-lg rounded-md py-2 w-64 z-50 origin-top"
                       >
                         {link.dropdown.map((subLink, i) => (
                           <Link
@@ -243,7 +255,7 @@ const Navbar = () => {
                       <FaFacebook size={18} className="text-white hover:text-secondary" />
                     </a>
                     <a href="https://www.instagram.com/eurocam_" target="_blank" rel="noreferrer">
-                      <FaInstagram size={18} className="text-white hover:text-secondary" />
+                      <Instagram size={18} className="text-white hover:text-secondary" />
                     </a>
                   </div>
                 </motion.div>

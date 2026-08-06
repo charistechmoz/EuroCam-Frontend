@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MdPhone, MdEmail } from "react-icons/md";
+import { FiArrowRight, FiChevronRight } from "react-icons/fi";
 import { Button } from "../../components/ui/button";
 import PageHeader from "../../components/PageHeader";
+import PAIESubNav from "../../components/PAIESubNav";
+import EUStars from "../../components/Eustars";
+import { paieMenu } from "../../assets/data/paieMenu";
 import PAIEImage from "../../assets/images/PAIE.PNG";
 
 const functions = [
@@ -22,8 +26,12 @@ const PAIE = () => {
       <PageHeader
         image={PAIEImage}
         title="Plataforma de Apoio ao Investidor"
-        
+        subtitle="Iniciativa EuroCam"
       />
+
+      {/* Sub-navegação com as 6 secções do portal */}
+      <PAIESubNav />
+
       <section className="w-full py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="inline-block text-secondary font-ubuntu font-semibold text-sm tracking-wide uppercase mb-4">
@@ -36,6 +44,71 @@ const PAIE = () => {
             Como iniciativa da EuroCam, o PAIE servirá como ombudsman e advogado
             em nome da EuroCam junto de investidores europeus em Moçambique.
           </p>
+        </div>
+      </section>
+
+      {/* --- Portal de serviços: as 6 secções --- */}
+      <section className="w-full bg-gray-50 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-4">
+            <EUStars size={24} opacity={0.9} />
+            <span className="text-secondary font-ubuntu font-semibold text-sm tracking-wide uppercase">
+              Portal de Serviços
+            </span>
+          </div>
+          <h2 className="font-ubuntu font-bold text-primary text-3xl md:text-4xl leading-tight mb-4">
+            Como podemos apoiar o seu investimento
+          </h2>
+          <p className="font-open-sans text-gray-500 text-base leading-relaxed max-w-2xl mb-12">
+            Escolha a área que corresponde à sua necessidade. Cada secção
+            reúne os serviços práticos disponibilizados pelo PAIE.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {paieMenu.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.slug}
+                  to={`/paie/${item.slug}`}
+                  className="group flex flex-col bg-white rounded-lg border border-gray-200 hover:border-primary/30 hover:shadow-lg transition-all duration-300 p-6"
+                >
+                  <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center mb-5">
+                    <Icon size={22} className="text-primary" />
+                  </div>
+
+                  <h3 className="font-ubuntu font-bold text-tertiary text-lg leading-snug mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="font-open-sans text-gray-500 text-sm leading-relaxed mb-5 flex-1">
+                    {item.description}
+                  </p>
+
+                  <ul className="flex flex-col gap-1.5 mb-5">
+                    {item.subcampos.slice(0, 3).map((sub, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-2 font-open-sans text-gray-400 text-xs"
+                      >
+                        <FiChevronRight size={12} className="text-secondary shrink-0" />
+                        {sub}
+                      </li>
+                    ))}
+                    {item.subcampos.length > 3 && (
+                      <li className="font-open-sans text-gray-400 text-xs pl-4">
+                        +{item.subcampos.length - 3} serviços
+                      </li>
+                    )}
+                  </ul>
+
+                  <span className="inline-flex items-center gap-1.5 text-primary font-ubuntu font-semibold text-sm mt-auto group-hover:gap-2.5 transition-all">
+                    Aceder
+                    <FiArrowRight size={15} />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 
