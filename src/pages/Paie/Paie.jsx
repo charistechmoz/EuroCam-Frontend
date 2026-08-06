@@ -48,8 +48,8 @@ const PAIE = () => {
               Ao trabalhar em estreita colaboração com os investidores europeus,
               o PAIE identifica as áreas de interesse e os constrangimentos
               enfrentados pelos investidores em diferentes fases dos seus ciclos
-              de negócio, contribuindo para um diálogo frutífero — tanto
-              privado-privado como público-privado — através da sua participação
+              de negócio, contribuindo para um diálogo frutífero tanto
+              privado-privado como público-privado através da sua participação
               no mecanismo de apoio pós-estabelecimento do governo.
             </p>
 
