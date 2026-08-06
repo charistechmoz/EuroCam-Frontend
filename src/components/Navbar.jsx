@@ -255,7 +255,7 @@ const Navbar = () => {
                       <FaFacebook size={18} className="text-white hover:text-secondary" />
                     </a>
                     <a href="https://www.instagram.com/eurocam_" target="_blank" rel="noreferrer">
-                      <Instagram size={18} className="text-white hover:text-secondary" />
+                      <FaInstagram size={18} className="text-white hover:text-secondary" />
                     </a>
                   </div>
                 </motion.div>
